@@ -92,6 +92,7 @@ class HBNBCommand(cmd.Cmd):
             for k, v in db.items():
                 if k.startswith(key):
                     print(str(v))
+
     def do_update(self, arg):
         args = arg.split()
         if len(args) == 0:
@@ -124,9 +125,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 setattr(obj, attr_name, attr_value)
             storage.save()
-
-
-
 
 
 if __name__ == "__main__":
